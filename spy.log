@@ -1,0 +1,84 @@
+1685818251402|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251500|8|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818251598|75|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|CREATE TABLE world.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))|CREATE TABLE world.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+1685818251603|2|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251612|7|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818251619|3|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|DELETE FROM world.DATABASECHANGELOGLOCK|DELETE FROM world.DATABASECHANGELOGLOCK
+1685818251623|3|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|INSERT INTO world.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)|INSERT INTO world.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+1685818251630|6|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251634|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1
+1685818251639|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0
+1685818251647|8|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251657|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251711|2|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251716|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1
+1685818251724|8|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818251726|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818285761|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818285836|6|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818285843|3|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818285849|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1
+1685818285873|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0
+1685818285883|9|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818285893|2|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818285924|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818285928|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1
+1685818285938|9|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818285940|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818304700|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818304772|5|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818304779|3|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818304785|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1
+1685818304809|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0
+1685818304826|16|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818304835|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305205|54|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|CREATE TABLE world.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)|CREATE TABLE world.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+1685818305207|1|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305211|3|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOG|SELECT COUNT(*) FROM world.DATABASECHANGELOG
+1685818305214|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+1685818305215|0|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305217|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818305219|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818305222|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305239|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305273|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOG|SELECT COUNT(*) FROM world.DATABASECHANGELOG
+1685818305276|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+1685818305297|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305307|7|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|CREATE TABLE world.test_table (test_id INT NOT NULL, test_column VARCHAR NULL, CONSTRAINT PK_TEST_TABLE PRIMARY KEY (test_id))|CREATE TABLE world.test_table (test_id INT NOT NULL, test_column VARCHAR NULL, CONSTRAINT PK_TEST_TABLE PRIMARY KEY (test_id))
+1685818305309|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305312|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305316|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1
+1685818305323|7|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305324|0|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305325|0|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305327|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1
+1685818305328|0|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818305329|0|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489407|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489480|5|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818489486|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818489491|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1|SELECT `LOCKED` FROM world.DATABASECHANGELOGLOCK WHERE ID=1
+1685818489509|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 1, LOCKEDBY = 'DESKTOP-V4IH0GE (192.168.1.83)', LOCKGRANTED = NOW() WHERE ID = 1 AND `LOCKED` = 0
+1685818489528|19|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489544|2|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489863|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT MD5SUM FROM world.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1|SELECT MD5SUM FROM world.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+1685818489866|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOG|SELECT COUNT(*) FROM world.DATABASECHANGELOG
+1685818489870|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+1685818489872|1|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489874|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818489877|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK|SELECT COUNT(*) FROM world.DATABASECHANGELOGLOCK
+1685818489882|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489904|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489939|2|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT COUNT(*) FROM world.DATABASECHANGELOG|SELECT COUNT(*) FROM world.DATABASECHANGELOG
+1685818489941|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC|SELECT * FROM world.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+1685818489959|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489973|9|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|CREATE TABLE world.test_table (test_id INT NOT NULL, test_column VARCHAR NULL, CONSTRAINT PK_TEST_TABLE PRIMARY KEY (test_id))|CREATE TABLE world.test_table (test_id INT NOT NULL, test_column VARCHAR NULL, CONSTRAINT PK_TEST_TABLE PRIMARY KEY (test_id))
+1685818489975|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489978|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489980|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1
+1685818489989|8|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489990|1|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489992|0|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489993|1|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/world|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1|UPDATE world.DATABASECHANGELOGLOCK SET `LOCKED` = 0, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1
+1685818489994|0|commit|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
+1685818489996|0|rollback|connection 0|url jdbc:p6spy:mysql://localhost:3306/world||
