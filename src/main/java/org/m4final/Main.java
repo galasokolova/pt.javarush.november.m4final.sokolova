@@ -74,7 +74,7 @@ public class Main {
                         .getInstance()
                         .findCorrectDatabaseImplementation(new JdbcConnection(connection));
 
-                Liquibase liquibase = new liquibase.Liquibase("changelog.xml", new ClassLoaderResourceAccessor(), database);
+                Liquibase liquibase = new liquibase.Liquibase("liquibase/changelog.xml", new ClassLoaderResourceAccessor(), database);
 
                 liquibase.update(new Contexts(), new LabelExpression());
             });
@@ -87,7 +87,7 @@ public class Main {
 
         main.sessionFactory.getCurrentSession().close();
 
-        List<Integer> ids = List.of(1, 2, 3, 4, 18, 20, 34, 89, 101, 102);
+        List<Integer> ids = List.of(1, 2, 3, 4);
 
         Instant startRedis = Instant.now();
         main.testRedisData(ids);
